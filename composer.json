@@ -1,0 +1,17 @@
+{
+    "name": "52983/sistemaescolarv4",
+    "description": "sistema escolarv4",
+    "type": "project",
+    "authors": [
+        {
+            "name": "jonatansedaces",
+            "email": "71829984+jonatansedaces@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^8.15",
+        "illuminate/events": "^8.16",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.2"
+    }
+}

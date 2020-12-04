@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules\bulma\css\bulma.min.css">
+    <script src="node_modules\axios\dist\axios.min.js"></script>
+    <title>sistema escolarv4</title>
+</head>
+<body>
+    <html>
+    <section class="hero is-primary">
+    <div class="hero-body">
+    <div class="container">
+    <h1 class="sistema escolar">
+          sistema escolar
+    </h1>
+      </div>
+    </div>
+      </section>
+      <form action="api/index.php/usuario" method="POST">
+        
+      <label for="usuarios">usuario</label>
+      <input class="input is is-info" type="text" id="usuario" name="usuario">
+    <div>
+      <div class="field">
+      <div class="control">
+        
+      <label for="password">password</label>  
+      <input class="input is-info" type="text" id="password" name= "password">
+      </div>
+       </div>
+      </div>
+      
+      
+      <div class="field">
+      <div class="control">
+
+       <input class="button" type="button"
+       value="enviar" onclick="login()">
+      </div>
+      </div>
+    
+    </form>
+      
+      <script>
+      function login(){
+        alert(`bienvenido:`)
+        axios.post(`api/index.php/usuarios/${document.forms[0].usuario.
+       value}`, {
+
+       usuario: document.forms[0].nombreusuario.value,   
+       password: document.forms[0].password.value,
+       }).then(resp => {
+       console.log(response);
+       }).catch(function (error) {
+       console.log(error);
+        })
+  }
+ </script>
+
+</body>
+</html>
+       
